@@ -1,10 +1,20 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
+    <router-link to="/lazyload">Lazyload</router-link>
   </div>
+  {{ author }}
   <router-view />
 </template>
+
+<script>
+export default {
+  props: {
+    author: String
+  }
+};
+</script>
 
 <style lang="less">
 #app {
